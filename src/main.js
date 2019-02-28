@@ -1,5 +1,5 @@
 let idArray = ['tt3896198', 'tt0076759', 'tt1371111'];
-
+let allData = [];
 let apiKey = '96fb7a85';
 const moviesData = () => {
     for (let i = 0; i < idArray.length; i++) {
@@ -8,7 +8,8 @@ const moviesData = () => {
         .then (response => response.json())
         .then (data=>{
         movieData = data;
-        console.log(movieData)
+        allData.push(movieData)
+        return movieData
         })
     }
 };
