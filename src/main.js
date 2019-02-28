@@ -25,7 +25,11 @@ let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Go
     'Finding Dory', 'Finding Nemo', 'Home Alone', 'It', 'The Butterfly Effect', 'The Butterfly Effect 2', 'Wonder Woman', 'Suicide Squad', 'Just My Luck',
     'Begin Again', 'Ready Player One', 'Logan', 'Interstellar', 'Ghost in the Shell', 'The Perks of Being a Wallflower',
     'Star Wars: Episode I - The Phantom Menace', 'Star Wars', 'Rogue One', 'Star Wars: Episode VII', 'Star Wars: Episode VIII - The Last Jedi',
-    'Solo: A Star Wars Story', 'Star Trek', 'Star Trek: Enterprise', 'Star Trek: Discovery '
+    'Solo: A Star Wars Story', 'Star Trek', 'Star Trek: Enterprise', 'Star Trek: Discovery', "The Lego Movie 2: The Second Part", "Pokémon Detective Pikachu",
+    'Daredevil', 'Captain Marvel', "Doctor Who", "A Quiet Place", "The Gifted", "Escape Room", "Venom", "Supergirl", "Arrow", "Dune", "Godzilla: King of the Monsters",
+    "Titans", "Aquaman", "Gotham", "Slumdog Millionaire", "Amélie", "Eternal Sunshine of the Spotless Mind", "Gone with the Wind",
+    "The Curious Case of Benjamin Button", "La vita è bella", "Casablanca", "Modern Times", "The Shining", "The Shining", "",
+    "Psycho", "The Exorcist", "The Thing", "Jaws", "Jaws", "Escape from New York", "Halloween", "Carrie", "Rosemary's Baby", "Poltergeist",
 ];
 let sortArray = idArray.sort()
 let allMovies = [];
