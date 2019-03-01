@@ -72,19 +72,20 @@ search.addEventListener('keyup', () => {
     }
 });
 
-let selectButton = '';
 
-//Función filtrado por Botón
-horrorButton.addEventListener('click', () => {
-    nameB = horrorButton.id;
-    let horror = window.movie.filterByGenre(allMovies, selectButton);
-    printData(horror);
-});
+
+// //Función filtrado por Botón
+// horrorButton.addEventListener('click', () => {
+//     nameB = horrorButton.id;
+//     let horror = window.movie.filterByGenre(allMovies, selectButton);
+//     printData(horror);
+// });
 
 // //Función conocer botón seleccionado. 
 for (let i = 0; i < classButton.length; i++) {
     classButton[i].addEventListener('click', () => {
-        selectButton = classButton[i].id
-        console.log(selectButton)
+      const selectButton = classButton[i].id
+      genrefilt = window.movie.filterByGenre(allMovies, selectButton)
     })
+    
 };
