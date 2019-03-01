@@ -1,12 +1,12 @@
 window.movie = {
   filterByTitle: (allMovies, name2) => {
 
-    const filteringTitle = allMovies.filter(element => (element.Title.toLowerCase().match(name2.toLowerCase()) ));
+    const filteringTitle = allMovies.filter(element => (element.Title.toLowerCase().match(name2.toLowerCase())));
     return filteringTitle;
   },
-  filterByGenre: (allMovies, nameB) => {
+  filterByGenre: (allMovies, selectButton) => {
 
-    const filteringGenre = allMovies.filter(element => (element.Genre.toLowerCase().match(nameB.toLowerCase())));
+    const filteringGenre = allMovies.filter(element => (element.Genre.toLowerCase().match(selectButton.toLowerCase())));
     return filteringGenre;
   },
   filterByYear: (allMovies, name2) => {

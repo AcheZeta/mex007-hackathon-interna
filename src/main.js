@@ -1,6 +1,7 @@
 const cardMovie = document.getElementById('card-movie');
 const search = document.getElementById('search');
 const horrorButton = document.getElementById('Horror')
+const classButton = document.getElementsByClassName('buttons-menu')
 
 const idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Goblet of Fire',
     'Harry Potter and the Deathly Hallows: Part 2', 'Harry Potter and the Prisoner of Azkaban',
@@ -60,6 +61,7 @@ const printData = (allMovies) => {
 }
 moviesData();
 
+//Función de filtrado por caja de texto. Nombre
 search.addEventListener('keyup', () => {
     let name2 = search.value;
     let filtered = window.movie.filterByTitle(allMovies, name2);
@@ -70,8 +72,19 @@ search.addEventListener('keyup', () => {
     }
 });
 
+let selectButton = '';
+
+//Función filtrado por Botón
 horrorButton.addEventListener('click', () => {
     nameB = horrorButton.id;
-    let horror = window.movie.filterByGenre(allMovies, nameB);
+    let horror = window.movie.filterByGenre(allMovies, selectButton);
     printData(horror);
 });
+
+// //Función conocer botón seleccionado. 
+for (let i = 0; i < classButton.length; i++) {
+    classButton[i].addEventListener('click', () => {
+        selectButton = classButton[i].id
+        console.log(selectButton)
+    })
+};
