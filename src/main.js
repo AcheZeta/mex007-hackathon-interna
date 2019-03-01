@@ -15,7 +15,7 @@ let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Go
     'The Hunger Games: Mockingjay - Part 2', 'Maze Runner: The Scorch Trials', 'Maze Runner: The Death Cure',
     'Titanic', 'The Conjuring', 'The Exorcist', '[Rec]', 'Skyfall', 'Spectre', 'Guardians of the Galaxy Vol. 2',
     'Me Before You', 'Pride & Prejudice', "He's Just Not That Into You", "The Time Traveler's Wife",
-    'Just Go with It', 'Midnight in Paris', 'The Devil Wears Prada', 'Memoirs of a Geisha', 'Interstellar',
+    'Just Go with It', 'Midnight in Paris', 'The Devil Wears Prada', 'Interstellar',
     "Pan's Labyrinth", 'The Shape of Water', 'Home Alone', 'It', 'The Butterfly Effect', 'The Butterfly Effect 2',
     'Wonder Woman', 'Suicide Squad', 'Just My Luck', 'Begin Again', 'Ready Player One', 'Logan',
     'Ghost in the Shell', 'The Perks of Being a Wallflower', 'Star Wars: Episode I - The Phantom Menace',
