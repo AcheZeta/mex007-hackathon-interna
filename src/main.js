@@ -1,7 +1,8 @@
 const cardMovie = document.getElementById('card-movie');
 const search = document.getElementById('search');
+const horrorButton = document.getElementById('Horror')
 
-let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Goblet of Fire',
+const idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Goblet of Fire',
     'Harry Potter and the Deathly Hallows: Part 2', 'Harry Potter and the Prisoner of Azkaban',
     'Harry Potter and the Chamber of Secrets', 'Harry Potter and the Deathly Hallows: Part 1',
     'Harry Potter and the Order of the Phoenix', 'Harry Potter and the Half-Blood Prince', 'Epic',
@@ -15,7 +16,7 @@ let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Go
     'The Hunger Games: Mockingjay - Part 2', 'Maze Runner: The Scorch Trials', 'Maze Runner: The Death Cure',
     'Titanic', 'The Conjuring', 'The Exorcist', '[Rec]', 'Skyfall', 'Spectre', 'Guardians of the Galaxy Vol. 2',
     'Me Before You', 'Pride & Prejudice', "He's Just Not That Into You", "The Time Traveler's Wife",
-    'Just Go with It', 'Midnight in Paris', 'The Devil Wears Prada', 'Memoirs of a Geisha', 'Interstellar',
+    'Just Go with It', 'Midnight in Paris', 'The Devil Wears Prada', 'Interstellar',
     "Pan's Labyrinth", 'The Shape of Water', 'Home Alone', 'It', 'The Butterfly Effect', 'The Butterfly Effect 2',
     'Wonder Woman', 'Suicide Squad', 'Just My Luck', 'Begin Again', 'Ready Player One', 'Logan',
     'Ghost in the Shell', 'The Perks of Being a Wallflower', 'Star Wars: Episode I - The Phantom Menace',
@@ -28,14 +29,15 @@ let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Go
     "Psycho", "The Thing", "Jaws", "Escape from New York", "Halloween", "Carrie", "Poltergeist"
 ];
 
-let sortArray = idArray.sort()
+let sortMovies = idArray.sort()
+console.log(sortMovies)
 let allMovies = [];
 let movieData = [];
 let apiKey = '96fb7a85';
 const moviesData = () => {
-    for (let i = 0; i < sortArray.length; i++) {
-        //Fetch para traer la data del archivo lol.json
-        fetch('https://www.omdbapi.com/?t=' + sortArray[i] + '&apikey=' + apiKey)
+    for (let i = 0; i < sortMovies.length; i++) {
+        //Fetch para traer la data del archivo
+        fetch('https://www.omdbapi.com/?t=' + sortMovies[i] + '&apikey=' + apiKey)
             .then(response => response.json())
             .then(data => {
                 movieData = data;
@@ -44,17 +46,15 @@ const moviesData = () => {
             })
             .then(result => printData(result))
             .catch(err => (err))
-
     }
-
 };
 
 // //Función para imprimir la data en el HTML
 const printData = (allMovies) => {
     cardMovie.innerHTML = " ";
     allMovies.forEach(movies => {
-        let result = `<div class="movie-container"> <div class="background-poster"> <img src="${movies.Poster}"> </div>
-      <div id="title">${movies.Title}</div></div>`;
+        let result = `<div class="movie-container"> <div class="background-poster"> <img id="posters" src="${movies.Poster}"> </div>
+      <div id="title">${movies.Title}</div><div id="year">${movies.Year}</div><div id="year">${movies.Genre}</div></div>`;
         cardMovie.insertAdjacentHTML("beforeend", result);
     });
 }
@@ -68,4 +68,10 @@ search.addEventListener('keyup', () => {
     } else {
         printData(filtered);
     }
+});
+
+horrorButton.addEventListener('click', () => {
+    nameB = horrorButton.id;
+    let horror = window.movie.filterByGenre(allMovies, nameB);
+    printData(horror);
 });
