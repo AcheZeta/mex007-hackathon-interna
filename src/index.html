@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Movie Pop</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Movie Pop</h1>
-    <input id="search" type="text" placeholder="Filter by name">
+    <header> <div id="logo"><img id="logo2" src="images/logo.png" alt="">
+    </div>
+            <input id="search" type="text" placeholder="Buscar por título">
+    </header>
+    
+    <div id="menu">
+        <div class="first-button" id="Horror" value="Horror" type="button"><img class="img-button" src="images/terror.png" alt=""></div>
+        <div class="buttons-menu" id="Romance" value="Romance" type="button"><img class="img-button" src="images/romantic.png" alt=""></div>
+        <div class="buttons-menu" id="Sci-Fi" value="Sci-Fi" type="button"><img class="img-button" src="images/fiction.png" alt=""></div>
+        <div class="buttons-menu" id="Action" value="Action" type="button"><img class="img-button" src="images/action.png" alt=""></div>
+    </div>
+    
     <div id="card-movie"></div>
     <script src="data.js"></script>
     <script src="main.js"></script>
 
 </body>
-</html>
 
+</html>

@@ -1,7 +1,8 @@
 const cardMovie = document.getElementById('card-movie');
 const search = document.getElementById('search');
+const horrorButton = document.getElementById('Horror')
 
-let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Goblet of Fire',
+const idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Goblet of Fire',
     'Harry Potter and the Deathly Hallows: Part 2', 'Harry Potter and the Prisoner of Azkaban',
     'Harry Potter and the Chamber of Secrets', 'Harry Potter and the Deathly Hallows: Part 1',
     'Harry Potter and the Order of the Phoenix', 'Harry Potter and the Half-Blood Prince', 'Epic',
@@ -28,17 +29,15 @@ let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Go
     "Psycho", "The Thing", "Jaws", "Escape from New York", "Halloween", "Carrie", "Poltergeist"
 ];
 
-let sortArray = idArray.sort()
-
-
-console.log(sortArray)
+let sortMovies = idArray.sort()
+console.log(sortMovies)
 let allMovies = [];
 let movieData = [];
 let apiKey = '96fb7a85';
 const moviesData = () => {
-    for (let i = 0; i < sortArray.length; i++) {
-        //Fetch para traer la data del archivo lol.json
-        fetch('https://www.omdbapi.com/?t=' + sortArray[i] + '&apikey=' + apiKey)
+    for (let i = 0; i < sortMovies.length; i++) {
+        //Fetch para traer la data del archivo
+        fetch('https://www.omdbapi.com/?t=' + sortMovies[i] + '&apikey=' + apiKey)
             .then(response => response.json())
             .then(data => {
                 movieData = data;
@@ -47,17 +46,15 @@ const moviesData = () => {
             })
             .then(result => printData(result))
             .catch(err => (err))
-
     }
-
 };
 
 // //Función para imprimir la data en el HTML
 const printData = (allMovies) => {
     cardMovie.innerHTML = " ";
     allMovies.forEach(movies => {
-        let result = `<div class="movie-container"> <div class="background-poster"> <img src="${movies.Poster}"> </div>
-      <div id="title">${movies.Title}</div></div>`;
+        let result = `<div class="movie-container"> <div class="background-poster"> <img id="posters" src="${movies.Poster}"> </div>
+      <div id="title">${movies.Title}</div><div id="year">${movies.Year}</div><div id="year">${movies.Genre}</div></div>`;
         cardMovie.insertAdjacentHTML("beforeend", result);
     });
 }
@@ -65,10 +62,17 @@ moviesData();
 
 search.addEventListener('keyup', () => {
     let name2 = search.value;
-    let filtered = window.movie.filterByTitle(allMovies, name2);
+    let filtered = window.movie.filterByGenre(allMovies, name2);
     if (name2 == "") {
         printData(allMovies);
     } else {
         printData(filtered);
     }
+});
+
+horrorButton.addEventListener('click', () => {
+    let name2 = horrorButton.value;
+    console.log(name2)
+    let horror = window.movie.filterByGenre(allMovies);
+    printData(horror);
 });
