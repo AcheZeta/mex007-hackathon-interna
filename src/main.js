@@ -62,7 +62,7 @@ moviesData();
 
 search.addEventListener('keyup', () => {
     let name2 = search.value;
-    let filtered = window.movie.filterByGenre(allMovies, name2);
+    let filtered = window.movie.filterByTitle(allMovies, name2);
     if (name2 == "") {
         printData(allMovies);
     } else {
@@ -71,8 +71,7 @@ search.addEventListener('keyup', () => {
 });
 
 horrorButton.addEventListener('click', () => {
-    let name2 = horrorButton.value;
-    console.log(name2)
-    let horror = window.movie.filterByGenre(allMovies);
+    nameB = horrorButton.id;
+    let horror = window.movie.filterByGenre(allMovies, nameB);
     printData(horror);
 });
