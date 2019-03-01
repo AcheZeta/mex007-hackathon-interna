@@ -29,6 +29,9 @@ let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Go
 ];
 
 let sortArray = idArray.sort()
+
+
+console.log(sortArray)
 let allMovies = [];
 let movieData = [];
 let apiKey = '96fb7a85';
