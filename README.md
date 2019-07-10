@@ -1,7 +1,46 @@
-# "Hackathon" de final de _Common Core_, películas
+# "Hackathon de Pelicula 🎥" de final de _Common Core_, películas
 
-## Movie Pop
-Información general: pagina web
+## Movie Pop 🍿
+
+**Movie Pop** fue el proyecto realizado durante un hackathon de tres días justo al finalizar el common core del bootcamp. 
+
+El equipo estuvo formado por: 
+
+- [Abygail Romero](https://github.com/Abygail27/mex007-hackathon-interna)
+- [Eleonore Nava](https://github.com/elenore29/mex007-hackathon-interna)
+- [Hameyalli Elizalde](https://github.com/AcheZeta/mex007-hackathon-interna)
+- [Mimí Moreno](https://github.com/Mimilaos/mex007-hackathon-interna)
+
+Durante el hackathon se tuvieron las siguientes consideraciones:
+
+- Este proyecto se debe resolver en equipos de hasta 4 personas.
+- Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
+- Tiempo para completar el reto: 3 días.
+- Habrán dos presentaciones, una a la mitad de la _hackathon_ y otra al final.
+- Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
+  por _squad_ en el que se presente el _planning_, el _research_, los _sketches_
+  y las inspiraciones utilizadas para definir el producto.
+- Además, deberás detallar en el archivo _readme_, qué hizo cada una en el
+  proyecto.
+- El producto deberá presentarse publicado en github pages.
+- El diseño visual de los componentes es de libre elección.
+- Pueden usar algún framework de css si así lo deciden.
+- Cada squad contó 5 minutos para presentar y 5 minutos para recibir preguntas.
+- Las personas que presentan en la primera presentación no deben ser las mismas de la presentación final.
+
+# El desarrollo. 
+
+Antes del hackathon se realizó la elección de track, UX o Front-End, con esta selección de tracks los coaches de Laboratoria formaron los equipos. 
+Abby, Eleonore y yo del track como front-end y Mimí como UX.
+
+Realizamos una lluvia de ideas sobre el proyecto tomando en cuenta los requerimientos. 
+Eleonore, Abby y yo partipamos en la ideación y construcción de funciones para la obtención de la API, filtrado y selección de películas a mostrar. 
+
+Realizamos historias de usuario y se realizarón encuestas para validar las opción 
+
+Mimí y Abby redactaron el readme que se encuentra acontinuación y durante una segunda iteración yo realicé la refactorización de las funciones, maquetado responsive y re-edición de Readme. 
+
+# Información general: pagina web
 
 Un poco de contexto:
 
@@ -14,7 +53,7 @@ Al abrir el espectro de posibilidades, el usuario se enfrente no solo a diferent
 Ante este paradigma nace MoviePop una aplicación que ofrece una manera fácil, dinámica y amigable para el usuario,  donde pueda consultar la sinopsis de los títulos que ofrece nuestro catálogo y así poder  decidir  qué película quiere ver ya sea por género, director, actores o los diversos filtros que ofrecemos dentro de la aplicación.
 
 
-punto fuerte de su empresa o producto
+## Punto fuerte de su empresa o producto
 
 Ofrece un espacio sencillo de manipular, donde el usuario pueda buscar por medio de un filtro (genero y nombre), las películas de su preferencia.
 
@@ -23,81 +62,63 @@ objetivos que pretende conseguir el producto
 Generar una plataforma para que el usuario pueda filtrar y almacenar por medio de listas las películas de su preferencia.
 
 
-productos o servicios:
+## Productos o servicios:
 
 Ofrecer al usuario una plataforma práctica donde el usuario pueda filtrar por medio del nombre y género las película de su preferencia y con ello poder acceder a la información general y la sinopsis para así poder hacer la elección entre la película que desee ver.
 
-Definición del producto:
+- Definición del producto:
 
 Practica y amigable
 
-PÚBLICO OBJETIVO
+- PÚBLICO OBJETIVO
 
-público objetivo del producto.
+   Hombres y mujeres entre 20 y 35 años
 
-   Hombres y mujeres
+- Percepción del público objetivo
 
-¿En qué horquilla de edad se mueve público?
+   Una aplicación atractiva y de fácil manejo.
 
-    entre 20 y 35 años
-
-percipción del público objetivo
-
-   Una aplicación atractiva de y de fácil manejo.
-
-¿Por qué el público objetivo compraría el producto o servicio?
+- ¿Por qué el público objetivo compraría el producto o servicio?
 
    Porque es una propuesta intuitiva y de fácil manejo.
 
-  porcentaje del público objetivo que pertenece a las siguientes categorías respecto a sus criterios estéticos:
+- Porcentaje del público objetivo que pertenece a las siguientes categorías respecto a sus criterios estéticos:
 
 
       o   Clásicos:        0%
       o   Modernos:        90%
       o   Desconocidos:    10%
 
-COMPETENCIA
+## COMPETENCIA
 
-[Rotten Tomatoes](https://www.rottentomatoes.com/)
-
-[The Hollywood Reporter](https://www.hollywoodreporter.com/)
-
-[Variety](https://variety.com/)
-
-[Metacritic]( https://www.metacritic.com/)
-[IMDb]( https://www.imdb.com/?ref_=nv_home)
+- [Rotten Tomatoes](https://www.rottentomatoes.com/)
+- [The Hollywood Reporter](https://www.hollywoodreporter.com/)
+- [Variety](https://variety.com/)
+- [Metacritic]( https://www.metacritic.com/)
+- [IMDb]( https://www.imdb.com/?ref_=nv_home)
 
 
-
-ventajas respecto a la competencia
+- Ventajas respecto a la competencia
 
       Un diseño diferente y de fácil manejo.
 
-desventajas respecto a la competencia
+- Desventajas respecto a la competencia
 
    Cuentan con diferentes tipos de información.
 
-HISTORIAS DE USUARIO
+## HISTORIAS DE USUARIO
 
-“Como usuario quiero una aplicación donde consultar películas y su información.
+“Como usuario quiero una aplicación donde consultar películas y su información."
 
-“Como usuario quiero realizar una búsqueda específica (titulo, genero, actor, director) en la app.
-Como usuario quiero que la plataforma me muestre películas relacionadas con las especificaciones de mi búsqueda.
+“Como usuario quiero realizar una búsqueda específica (titulo, genero, actor, director) en la app."
 
-para conocer mas información del proceso de experiencia de usuario da click [aquí](https://docs.google.com/presentation/d/1BZDweegeUMAuKcTMg3lMFwljnugyzYIkg4hNmVxM6wk/edit?usp=sharing)
+"Como usuario quiero que la plataforma me muestre películas relacionadas con las especificaciones de mi búsqueda."
+
+Para conocer mas información del proceso de experiencia de usuario da click [aquí](https://docs.google.com/presentation/d/1BZDweegeUMAuKcTMg3lMFwljnugyzYIkg4hNmVxM6wk/edit?usp=sharing)
 
 
-## Integrantes de Equipo y división de trabajo
 
-Hameyalli Elizalde Acevedo: Front-end. :slightly_smiling_face:
-Eleonore Elisa Espinosa Nava: Front-end. :slightly_smiling_face:
-
-Nohemi Eugenia Moreno Coronado: UX. :slightly_smiling_face:
-Abygail Romero Rocha: UX. :slightly_smiling_face:
-
-------------------------------------------------------------------------------
-
-# "Hackathon" de final de _Common Core_, películas
+<!-- # "Hackathon" de final de _Common Core_, películas
 
 ## Índice
 
@@ -160,4 +181,4 @@ comedia ... o... ¡lo que quieran!
 
 - Cada squad tendrá 5 minutos para presentar y 5 minutos para recibir preguntas.
 
-- Las personas que presentan en la primera presentación no deben ser las mismas de la presentación final.
+- Las personas que presentan en la primera presentación no deben ser las mismas de la presentación final. -->
