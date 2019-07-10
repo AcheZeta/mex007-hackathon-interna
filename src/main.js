@@ -30,9 +30,9 @@ let allMovies = [];
 let movieData = [];
 let apiKey = '96fb7a85';
 const moviesData = () => {
-    for (let i = 0; i < sortMovies.length; i++) {
+    for (let i = 0; i < sortArray.length; i++) {
         //Fetch para traer la data del archivo
-        fetch('https://www.omdbapi.com/?t=' + sortMovies[i] + '&apikey=' + apiKey)
+        fetch('https://www.omdbapi.com/?t=' + sortArray[i] + '&apikey=' + apiKey)
             .then(response => response.json())
             .then(data => {
                 movieData = data;
