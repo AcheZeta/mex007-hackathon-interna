@@ -1,8 +1,10 @@
 const cardMovie = document.getElementById('card-movie');
 const search = document.getElementById('search');
+
 const classButton = document.getElementsByClassName('buttons-menu');
 
-let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Goblet of Fire',
+
+const idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Goblet of Fire',
     'Harry Potter and the Deathly Hallows: Part 2', 'Harry Potter and the Prisoner of Azkaban',
     'Harry Potter and the Chamber of Secrets', 'Harry Potter and the Deathly Hallows: Part 1',
     'Harry Potter and the Order of the Phoenix', 'Harry Potter and the Half-Blood Prince', 'Guardians of the Galaxy Vol. 2',
@@ -24,12 +26,13 @@ let idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the Go
     'Solo: A Star Wars Story', 'Star Trek', 'Star Trek: Enterprise', 'Star Trek: Discovery'
 ];
 let sortArray = idArray.sort()
+
 let allMovies = [];
 let movieData = [];
 let apiKey = '96fb7a85';
 const moviesData = () => {
     for (let i = 0; i < sortArray.length; i++) {
-        //Fetch para traer la data del archivo lol.json
+        //Fetch para traer la data del archivo
         fetch('https://www.omdbapi.com/?t=' + sortArray[i] + '&apikey=' + apiKey)
             .then(response => response.json())
             .then(data => {
@@ -48,6 +51,7 @@ const movies = document.getElementsByClassName('movies-container');
 const printData = (allMovies) => {
     cardMovie.innerHTML = " ";
     allMovies.forEach(movies => {
+
         let result = `<div id='${movies.imdbID}' class="movie-container"> 
     <div class="background-poster" style="background-image:url(${movies.Poster})"> </div>
       <div id="title">        
@@ -71,6 +75,7 @@ search.addEventListener('keyup', () => {
     }
 });
 
+
 // //Esta función es para seleccionar el genero por el cual se va a filtrar
 const selectGenre = () => {
     for (let i = 0; i < classButton.length; i++) {
@@ -82,4 +87,6 @@ const selectGenre = () => {
     }
 };
 
+
 selectGenre();
+

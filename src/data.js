@@ -1,5 +1,6 @@
 window.movie = {
   filterByTitle: (allMovies, name2) => {
+
     listName = []
     allMovies.filter(element => {
       if (element.hasOwnProperty('Title' || 'Director' || 'Year')) {
