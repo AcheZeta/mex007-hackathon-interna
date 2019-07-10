@@ -28,6 +28,17 @@ Durante el hackathon se tuvieron las siguientes consideraciones:
 - Cada squad contó 5 minutos para presentar y 5 minutos para recibir preguntas.
 - Las personas que presentan en la primera presentación no deben ser las mismas de la presentación final.
 
+# El desarrollo. 
+
+Antes del hackathon se realizó la elección de track, UX o Front-End, con esta selección de tracks los coaches de Laboratoria formaron los equipos. 
+Abby, Eleonore y yo del track como front-end y Mimí como UX.
+
+Realizamos una lluvia de ideas sobre el proyecto tomando en cuenta los requerimientos. 
+Eleonore, Abby y yo partipamos en la ideación y construcción de funciones para la obtención de la API, filtrado y selección de películas a mostrar. 
+
+Realizamos historias de usuario y se realizarón encuestas para validar las opción 
+
+Mimí y Abby redactaron el readme que se encuentra acontinuación y durante una segunda iteración yo realicé la refactorización de las funciones, maquetado responsive y re-edición de Readme. 
 
 # Información general: pagina web
 
