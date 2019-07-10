@@ -23,7 +23,8 @@ const idArray = ["Harry Potter and the Sorcerer's Stone", 'Harry Potter and the 
     'It', 'The Butterfly Effect', 'The Butterfly Effect 2', 'Wonder Woman', 'Suicide Squad', 'Just My Luck',
     'Begin Again', 'Ready Player One', 'Logan', 'Interstellar', 'Ghost in the Shell', 'The Perks of Being a Wallflower',
     'Star Wars: Episode I - The Phantom Menace', 'Star Wars', 'Rogue One', 'Star Wars: Episode VII', 'Star Wars: Episode VIII - The Last Jedi',
-    'Solo: A Star Wars Story', 'Star Trek', 'Star Trek: Enterprise', 'Star Trek: Discovery'];
+    'Solo: A Star Wars Story', 'Star Trek', 'Star Trek: Enterprise', 'Star Trek: Discovery'
+];
 let sortArray = idArray.sort()
 
 let allMovies = [];
@@ -44,7 +45,7 @@ const moviesData = () => {
     }
 };
 
- const movies = document.getElementsByClassName('movies-container'); 
+const movies = document.getElementsByClassName('movies-container');
 
 // //Función para imprimir la data en el HTML
 const printData = (allMovies) => {
@@ -56,7 +57,8 @@ const printData = (allMovies) => {
       <div id="title">        
       <p>${movies.Title}</p>
       <div class="espacio"></div>
-
+      <p>${movies.Year}</p>
+      <p>${movies.Genre}</p>
       </div>`;
         cardMovie.insertAdjacentHTML("beforeend", result);
     });
@@ -85,5 +87,6 @@ const selectGenre = () => {
     }
 };
 
-selectGenre(); 
+
+selectGenre();
 
